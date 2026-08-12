@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7b8cc" />
+    <title>EnchantedForYou</title>
+    <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background" aria-hidden="true"></div>
+    <button class="night-toggle" id="night-toggle" aria-pressed="false" aria-label="Show night sky background"><span>✦</span> Night sky button</button>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">a little corner of the world, made just for you</p>
+        <h1>Enchanted<span>ForYou</span></h1>
+        <p class="subtitle">Every song holds a piece of my heart.</p>
+      </header>
+
+      <section class="music-card" aria-label="Music player">
+        <div class="song-art" aria-hidden="true"><span>♫</span></div>
+        <div class="track-details">
+          <p class="now-playing">NOW PLAYING</p>
+          <h2 id="track-title">Your enchanted playlist</h2>
+          <p id="track-artist">Press play to begin</p>
+        </div>
+        <a class="round-button playlist-shortcut" id="playlist-shortcut" href="#" target="_blank" rel="noopener" title="Open playlist" aria-label="Open playlist">↗</a>
+
+        <div class="controls">
+          <button class="icon-button" id="shuffle" title="Shuffle" aria-label="Shuffle">⤨</button>
+          <button class="icon-button" id="previous" title="Previous track" aria-label="Previous track">⏮</button>
+          <button class="play-button" id="play-pause" title="Play" aria-label="Play">▶</button>
+          <button class="icon-button" id="next" title="Next track" aria-label="Next track">⏭</button>
+          <button class="icon-button" id="mute" title="Mute" aria-label="Mute">◔</button>
+        </div>
+        <div class="timeline" aria-label="Playback progress">
+          <time id="elapsed">0:00</time>
+          <input id="progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Seek within current song" />
+          <time id="duration">0:00</time>
+        </div>
+        <div class="volume-wrap"><span aria-hidden="true">♡</span><input id="volume" type="range" min="0" max="100" value="70" aria-label="Volume" /></div>
+      </section>
+
+      <section class="little-things" aria-label="Little things for you">
+        <button class="feature-card" id="love-note-button"><span class="feature-icon">♡</span><span><strong>A love note</strong><small>from my heart to yours</small></span></button>
+        <a class="feature-card" id="playlist-link" href="#" target="_blank" rel="noopener"><span class="feature-icon">♫</span><span><strong>Our playlist</strong><small>every song is you</small></span></a>
+        <button class="feature-card" id="voice-button"><span class="feature-icon">⌁</span><span><strong>A tiny reminder</strong><small>tap to hear my love</small></span></button>
+      </section>
+
+      <button class="clock" id="clock-button" aria-label="Current local time — tap for a message"><span>♡</span><time id="clock">--:--</time></button>
+      <p class="closing">Love you more than all the stars, always.</p>
+    </main>
+
+    <dialog id="note-dialog">
+      <button class="close-dialog" id="close-note" aria-label="Close love note">×</button>
+      <span class="letter-heart">♥</span>
+      <p class="letter-label">A NOTE FOR YOU</p>
+      <p id="love-note-text">Replace this with the little love note you want her to read.</p>
+    </dialog>
+    <dialog id="clock-dialog">
+      <button class="close-dialog" id="close-clock-message" aria-label="Close message">×</button>
+      <span class="letter-heart">♥</span>
+      <p class="letter-label">A LITTLE MOMENT FOR YOU</p>
+      <p id="clock-message"><strong>Areee… time per click kar diya na, bebu!</strong>
+
+Matlab, even though you have so little time, you still choose to spend it listening to these songs here. That alone says everything - it shows just how much you love me, cutu 💖</p>
+    </dialog>
+
+    <div id="youtube-player" aria-hidden="true"></div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
