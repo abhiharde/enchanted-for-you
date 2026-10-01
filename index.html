@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="background" aria-hidden="true"></div>
-    <button class="night-toggle" id="night-toggle" aria-pressed="false" aria-label="Show night sky background"><span>✦</span> Night sky button</button>
+    <button class="night-toggle" id="night-toggle" aria-pressed="false" aria-label="Show night sky background"><span>✦</span> Night Sky</button>
     <main class="page-shell">
       <header class="hero">
         <p class="eyebrow">a little corner of the world, made just for you</p>
@@ -48,7 +48,7 @@
       <section class="little-things" aria-label="Little things for you">
         <button class="feature-card" id="love-note-button"><span class="feature-icon">♡</span><span><strong>A love note</strong><small>from my heart to yours</small></span></button>
         <a class="feature-card" id="playlist-link" href="#" target="_blank" rel="noopener"><span class="feature-icon">♫</span><span><strong>Our playlist</strong><small>every song is you</small></span></a>
-        <button class="feature-card" id="voice-button"><span class="feature-icon">⌁</span><span><strong>A tiny reminder</strong><small>tap to hear my love</small></span></button>
+        <button class="feature-card" id="gallery-button"><span class="feature-icon">▧</span><span><strong>Memory gallery</strong><small>little moments, always</small></span></button>
       </section>
 
       <button class="clock" id="clock-button" aria-label="Current local time — tap for a message"><span>♡</span><time id="clock">--:--</time></button>
@@ -71,6 +71,18 @@ Matlab, even though you have so little time, you still choose to spend it listen
     </dialog>
 
     <div id="youtube-player" aria-hidden="true"></div>
+     <dialog id="gallery-dialog" aria-label="Memory gallery">
+       <button class="close-dialog" id="close-gallery" aria-label="Close memory gallery">×</button>
+       <span class="letter-heart">♡</span>
+       <p class="letter-label">OUR LITTLE MOMENTS</p>
+      <p class="gallery-empty" id="gallery-empty">Your favorite memories will appear here.</p>
+       <div class="gallery-stage" id="gallery-stage" hidden>
+         <img class="gallery-image is-visible" id="gallery-image-a" alt="A memory together" />
+         <img class="gallery-image" id="gallery-image-b" alt="A memory together" />
+       </div>
+     </dialog>
+
+     <div id="youtube-player" aria-hidden="true"></div>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="script.js"></script>
   </body>

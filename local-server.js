@@ -2,7 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
-const types = { ".css": "text/css", ".html": "text/html", ".js": "text/javascript", ".png": "image/png", ".svg": "image/svg+xml" };
+const types = { ".css": "text/css", ".html": "text/html", ".js": "text/javascript", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp", ".svg": "image/svg+xml" };
 http.createServer((request, response) => {
   const pathname = new URL(request.url, "http://localhost").pathname;
   const requested = pathname === "/" ? "index.html" : decodeURIComponent(pathname);
